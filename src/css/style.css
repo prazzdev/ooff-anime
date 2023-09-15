@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    image-rendering: optimizeSpeed;
+}
+
+p::selection, h1::selection, h3::selection, b::selection {
+    color: #91C8E4;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 1px 0 7px rgba(0,0,0,.5);
+}
+header > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #91C8E4;
+    padding: 20px;
+}
+header > nav > h3 > a {
+    text-decoration: none;
+    color: white;
+}
+nav > h3 {
+    letter-spacing: .05em;
+    color: white;
+}
+#navmenu > a {
+    display: inline-block;
+    margin-right: 25px;
+    font-size: .9em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    letter-spacing: .15em;
+}
+nav > button {
+    display: none;
+}
+main {
+    display: flex;
+    padding: 1em;
+}
+main > #content {
+    width: 80%;
+    z-index: 2;
+    margin-right: 20px;
+    padding: 0 1.5em;
+}
+#content > article {
+    margin: 1em 0 2em;
+}
+#content > article > h3 {
+    margin-bottom: 2px;
+}
+#content > article > p {
+    text-align: justify;
+}
+#content > article#character-actor > div,
+#content > article#staff > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+#content > article > #galeri {
+    margin-top: 1em;
+}
+#content > article > #galeri > img {
+    width: 250px;
+    margin-right: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+#content > article > #galeri > img:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,.6);
+}
+#character-wrapper {
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    background: #f8f8f8;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+#character-wrapper:hover {
+    box-shadow: 0px 3px 6px rgba(0,0,0,.5);
+}
+#character, #actor {
+    min-width: 50%;
+    display: flex;
+    width: fit-content;
+}
+#character > img,
+#actor > img {
+    display: inline-block;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    max-width: 100px;
+}
+#content > article#staff > div > #character-wrapper > #actor > img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;    
+}
+#character > img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#character > div,
+#actor > div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#character > div > span:nth-child(1),
+#actor > div > span:nth-child(1) {
+    color: #91C8E4;
+}
+main > aside {
+    width: auto;
+    padding: 1em;
+}
+aside > div:nth-child(1) {
+    background: #000;
+    display: flex;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 2.5em;
+    box-shadow: 1px 10px 15px rgba(0,0,0,.5);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+aside > div:nth-child(1):hover {
+    box-shadow: 0px 2px 5px rgba(0,0,0,.5);
+}
+aside > div {
+    margin-bottom: 15px;
+}
+aside > div > h3 {
+    margin-bottom: 3px;
+}
+aside > div > ul {
+    list-style: none;
+}
+
+#anim1, #anim2, #anim3 {
+    position: absolute;
+    z-index: -1;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+#anim1 {
+    top: 6em;
+    left: 1em;
+}
+#anim2 {
+    top: 26em;
+    right: 26em;
+}
+#anim3 {
+    bottom: -30em;
+    right: 2em;
+}
+
+#anim1, #anim2, #anim3 {
+    animation: spin infinite .3s;
+    -webkit-animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0); -webkit-transform: rotate(0); -moz-transform: rotate(0); -ms-transform: rotate(0); -o-transform: rotate(0); }
+    100% { transform: rotate(360deg); -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #91C8E4;
+    color: white;
+    font-size: .9em;
+}
+footer > a {
+    text-decoration: none;
+    color: white;
+}
+
+flex {
+    visibility: visible;
+}
+
+@media(max-width: 768px) {
+    header > nav > a {
+        text-decoration: none;
+        color: white;
+    }
+    #navmenu {
+        position: absolute;
+        top: 4.1em;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        padding-left: 1.5em;
+        max-height: fit-content;
+        padding-top: 1.2em;
+        background-color: #91C8E4;
+    }
+    #navmenu > a {
+        margin-bottom: 1.2em;
+    }
+    nav > button {
+        display: block;
+        border: none;
+        background: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main > #content {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    #character-wrapper {
+        min-width: 100%;
+    }
+    #character-wrapper > div > img {
+        max-height: 80px;
+    }
+    #character-wrapper > #character > img,
+    #character-wrapper > #actor > img,
+    #character-wrapper > #staff > img {
+        min-height: 100px;
+        min-width: 70px;
+    }
+    #character-wrapper > #character > div > span,
+    #character-wrapper > #actor > div > span,
+    #character-wrapper > #staff > div > span {
+        font-size: 14px;
+    }
+    #character-wrapper > #character > div > span:nth-child(2),
+    #character-wrapper > #actor > div > span:nth-child(2),
+    #character-wrapper > #staff > div > span:nth-child(2) {
+        font-size: 12px;
+    }
+    #galeri {
+        text-align: center;
+    }
+    #galeri > img {
+        margin-bottom: 1em;
+    }
+}
